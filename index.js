@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 const path = require('path');
 const public = path.join(__dirname,'public');
@@ -9,6 +10,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({
     extended: false
 }));
+
+app.use(cors());
 
 const mustache = require('mustache-express');
 app.engine('mustache', mustache());
