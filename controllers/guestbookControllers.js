@@ -87,3 +87,16 @@ exports.about_page = function (req, res) {
     res.status(200);
     res.redirect("/about.html");
   };
+
+exports.not_found= function(req, res) {
+    res.status(404);
+    res.type('text/plain');
+    res.send('404 Not found.');
+}
+
+exports.server_error= function(err, req, res, next) {
+  res.status(500);
+  res.type('text/plain'); 
+  res.send('Internal Server Error.'); 
+}
+  
