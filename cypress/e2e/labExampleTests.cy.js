@@ -36,7 +36,7 @@ describe("write in the guestbook", () => {
     cy.get('#form').submit()
   })
 // })
-  it('.submit() - submit a form', () => {
+  it('submit the form', () => {
     
     cy.visit("/new");
     
